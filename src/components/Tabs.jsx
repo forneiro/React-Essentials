@@ -26,10 +26,30 @@ export default function Tabs() {
     <div id="examples">
       <h2>Examples</h2>
       <menu>
-        <button onClick={() => handleExample("components")}>Components</button>
-        <button onClick={() => handleExample("jsx")}>JSX</button>
-        <button onClick={() => handleExample("props")}>Props</button>
-        <button onClick={() => handleExample("state")}>State</button>
+        <button
+          className={example === "components" ? "active" : ""}
+          onClick={() => handleExample("components")}
+        >
+          Components
+        </button>
+        <button
+          className={example === "jsx" ? "active" : ""}
+          onClick={() => handleExample("jsx")}
+        >
+          JSX
+        </button>
+        <button
+          className={example === "props" ? "active" : ""}
+          onClick={() => handleExample("props")}
+        >
+          Props
+        </button>
+        <button
+          className={example === "state" ? "active" : ""}
+          onClick={() => handleExample("state")}
+        >
+          State
+        </button>
       </menu>
 
       {content}
